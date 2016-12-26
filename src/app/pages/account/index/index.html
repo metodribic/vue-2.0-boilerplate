@@ -18,6 +18,9 @@
           <th>
             Email
           </th>
+          <th>
+            Actions
+          </th>
         </tr>
         </thead>
         <tbody>
@@ -30,6 +33,15 @@
           </td>
           <td>
             {{$store.state.account.email}}
+          </td>
+          <td>
+            <router-link
+              :to="{ name: 'account.edit' }"
+              active-class="active"
+              class="btn btn-primary"
+            >
+              <i class="fa fa-pencil"></i>
+            </router-link>
           </td>
         </tr>
         </tbody>
