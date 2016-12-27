@@ -6,16 +6,12 @@
  */
 
 import accountService from './../../../services/account';
-import store from './../../../store/modules/account';
 
 export default {
   computed: {
     account: {
       get() {
-        return store.state;
-      },
-      set() {
-        //
+        return Object.assign({}, this.$store.state.account);
       },
     },
   },
