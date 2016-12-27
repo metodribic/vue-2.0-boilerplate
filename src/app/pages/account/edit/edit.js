@@ -9,10 +9,8 @@ import accountService from './../../../services/account';
 
 export default {
   computed: {
-    account: {
-      get() {
-        return Object.assign({}, this.$store.state.account);
-      },
+    account() {
+      return Object.assign({}, this.$store.state.account);
     },
   },
   methods: {
